@@ -46,9 +46,7 @@
     }
 
     /* RECIPE CARDS */
-    #bestRecipes {
-        margin: 30px auto;
-    }
+    
     .recipe-card-container {
         grid-template-columns: 1fr;
     }
@@ -69,7 +67,7 @@
     html {
         font-size: 4vw;
     }
-    
+
     #headerLogo, #footerLogo {
         font-size: 104px;
     }
@@ -93,5 +91,12 @@
         font-size: 54px;
         width: 100px;
         margin: 15px 15px;
+    }
+}
+
+/* fixes header overlapping the text */
+@media only screen and (max-width: 1100px) {
+    #bestRecipes {
+        margin: 30px auto;
     }
 }

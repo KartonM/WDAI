@@ -1,8 +1,7 @@
-@media only screen and (max-width: 1024px) {
-    html {
-        font-size: 26px;
+@media only screen and (max-device-width: 480px), (max-width: 875px) {
+    html { 
+        font-size: 16px;
     }
-
 
     /* HEADER */
     #headerMenuItems,
@@ -13,6 +12,15 @@
     #headerToggleMenu {
         display: block;
         grid-column-start: 3;
+        border-radius: 8px;
+        border: 2px solid #FAE5BA;
+        padding: 5px 15px;
+        
+    }
+
+    #headerToggleMenu:hover {
+        color: #C14A12;
+        background-color: #FAE5BA;
     }
 
     header {
@@ -21,22 +29,69 @@
 
     /* BANNER */
     .banner-text .btn {
-        font-size: 1.3rem;
+        font-size: 2rem;
     }
 
-
-
+    /* WELCOME */
     #welcomeSection {
         grid-template-columns: 1fr;
+        padding: 30px;
+    }
+    #bestRecipes {
+        padding: 0 30px;
     }
 
+    #welcomeImage {
+        display: none;
+    }
 
-
+    /* RECIPE CARDS */
+    #bestRecipes {
+        margin: 30px auto;
+    }
     .recipe-card-container {
         grid-template-columns: 1fr;
     }
 
     .recipe-card {
         margin-top: 40px;
+    }
+
+    /* FOOTER */ 
+    footer #footerColumns {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* styles specific for mobile */
+@media only screen and (max-device-width: 480px) {
+
+    html {
+        font-size: 4vw;
+    }
+    
+    #headerLogo, #footerLogo {
+        font-size: 104px;
+    }
+
+    #headerToggleMenu {
+        font-size: 54px;
+        border: 4px solid #FAE5BA;
+        padding: 10px 25px;
+    }
+
+    footer #footerColumns div {
+        padding: 50px;
+    }
+
+    footer li a {
+        font-size: 44px;
+    }
+
+    #footerSocials .fab {
+        padding: 30px 10px;
+        font-size: 54px;
+        width: 100px;
+        margin: 15px 15px;
     }
 }

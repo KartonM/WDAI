@@ -110,6 +110,14 @@ header .btn:hover {
     background-color: #FAE5BA;
 }
 
+#headerToggleMenu {
+    /* display: none; */
+    font-size: 30px;
+    padding: 5px 15px;
+    border: 3px solid #FAE5BA;
+    border-radius: 5px;
+}
+
 
 /* BANNER */
 .banner {

@@ -246,14 +246,73 @@ header .btn:hover {
     text-decoration: none;
 }
 
+/* .card-tall {
+    grid-row-end: span 2;
+} */
+
+.card-tall .card-image img {
+    max-height: 400px;
+    object-fit: cover;
+    margin: 0 auto;
+}
+
+.flip-box {
+    background-color: transparent;
+    /* width: 300px;
+    height: 300px; */
+    width: 100%;
+    height: 350px;
+    perspective: 1000px;
+}
+
+.flip-box-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.card-tall .flip-box .flip-box-inner {
+    transform: rotateY(180deg);
+}
+
+.card-image, .card-image-alt {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.card-image-alt {
+    transform: rotateY(180deg);
+}
+
+.recipe-card {
+    max-height: 670px;
+    transition: max-height 0.75s ease-out;
+    overflow: hidden;
+}
+
+.card-tall .recipe-card {
+    max-height: 1440px;
+    transition: max-height 0.75s ease-in;
+/* overflow: hidden; */
+}
+
+.recipe {
+    margin-bottom: 40px;
+}
+
 /* https://paulund.co.uk/css-animation-link-underline */
 /* ------ */
-.card-description  h3 {
+.card-description  .recipe-title {
     margin-bottom: 10px;
     position: relative;
 }
 
-.card-description h3:before {
+.card-description .recipe-title:before {
     content: "";
     position: absolute;
     width: 0;
@@ -267,7 +326,7 @@ header .btn:hover {
     transition: all 0.3s ease-in-out;
 }
 
-.recipe-card:hover .card-description h3:before {
+.recipe-card:hover .card-description .recipe-title:before {
     visibility: visible;
     z-index: 100;
     width: 70px;

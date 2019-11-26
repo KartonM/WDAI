@@ -30,6 +30,11 @@ h3 {
     cursor: pointer;
     border-radius: 10px;
     border: 2px solid black;
+    letter-spacing: 0.1em;
+    color: #FAE5BA;
+    background-color: #BF202D;
+    transition: background 0.15s;
+    text-decoration: none;
 }
 
 
@@ -97,14 +102,12 @@ header li a:hover, footer li a:hover {
     border-radius: 5px;
 }
 
-header .btn {
+.btn {
     border-color:#FAE5BA;
-    letter-spacing: 0.1em;
-    color: #FAE5BA;
-    background-color: transparent;
+    
 }
 
-header .btn:hover {
+.btn:hover {
     border-color:#FAE5BA;
     color: #C14A12;
     background-color: #FAE5BA;
@@ -392,4 +395,91 @@ footer > div > div {
 #footerSocials .fa-instagram {
     background: #125688;
     color: white;
+}
+
+/* ADD RECIPE POPUP */
+/* some styles from https://codepen.io/syalakshay/pen/pWmYXx/ */
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7); 
+    transition: opacity 500ms; 
+    visibility: hidden; 
+    opacity: 0; 
+    z-index: 9999;
+}
+
+.overlay:target { 
+    visibility: visible; 
+    opacity: 1;
+
+}
+
+#popup1 .popup {
+    margin: 0px auto; 
+    padding: 50px 20px;
+    background: #fff; 
+    border-radius: 0px; 
+    max-height: 800px;
+    width:720px; 
+    position: relative;   
+    /* text-align: center; */
+    top: 50% !important;   
+    position: fixed !important;
+    -moz-transform: translateY(-50%);  
+    -webkit-transform: translateY(-50%);  
+    -o-transform: translateY(-50%);   
+    -ms-transform: translateY(-50%);    
+    transform: translateY(-50%);
+    right: 0px;
+    left: 0;
+    overflow: auto;
+}
+
+#popup1 .popup .close {position: absolute; 
+    top: 0px;  
+    right: 0px; 
+    transition: all 200ms; 
+    font-size: 30px;  
+    font-weight: normal; 
+    text-decoration: none;  
+    text-align: center;    
+    background: #333;  
+    border-radius: 0;  
+    cursor: pointer;  
+    float: right;  
+    padding: 0;  
+    color: #fff;  
+    margin-top: 0;  
+    margin-right: 0;  
+    height: 40px;  
+    width: 40px;    
+    line-height: 45px;
+
+}
+#popup1 .popup .close:hover {
+    color: #BF202D;
+}
+
+.popup h2 {
+    text-align: center;
+}
+
+input[type=text], textarea {
+    font-size: 16px;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.popup .btn {
+    border: none;
+    padding: 12px 40px;
 }

@@ -15,6 +15,44 @@
 
 </head>
 <body>
+    <div id="popup1" class="overlay" onclick="closePopup()">
+        <div class="popup"> <a class="close" href="#bestRecipes">&times;</a>
+            <div id="dialog" class="window">
+                <h2>Dodaj przepis</h2>
+                <form>
+                    <div>
+                        <label>Nazwa</label>
+                        <input id="titleInput" type="text"/>
+                    </div>
+                    <div>
+                        <label>Adres zdjęcia</label>
+                        <input id="imgSrcInput" type="text"/>
+                    </div>
+                    <div>
+                        <label>Adres zdjęcia alternatywnego</label>
+                        <input id="altImgSrcInput" type="text"/>
+                    </div>
+                    <div>
+                        <label>Opis</label>
+                        <textarea id="descriptionInput" cols="40" rows="5"></textarea>
+                    </div>
+                    <div>
+                        <label>Składniki</label>
+                        <ul id="ingridientsInput">
+                            <li><input class="ingridientInput" onchange="addIngridientInput()" type="text"/></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <label>Kroki</label>
+                        <ol id="stepsInput">
+                            <li><input class="stepInput" onchange="addStepInput()" type="text"/></li>
+                        </ol>
+                    </div>
+                    <a href="#bestRecipes" class="btn" onclick="validateInput()">Dodaj</a>
+                </form>
+            </div>
+        </div>
+    </div>
     <div class="container">
         <header>
             <div id="headerLogo">
@@ -41,7 +79,7 @@
                 <h1>Przysmaki tej jesieni</h1>
                 <hr/>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi iaculis, sem sit amet aliquam malesuada, eros ex pharetra sem, a fringilla arcu lacus eget lectus. Vestibulum rutrum augue nisi, eu eleifend lectus suscipit eu.</p>
-                <button class="btn">Sprawdź!</button>
+                <a href="#popup1" class="btn" style="text-decoration: none;">Sprawdź!</a>
             </div>
 
         </div>
@@ -60,7 +98,7 @@
         <div id="bestRecipes">
             <h2>Popularne przepisy</h2>
             <hr/>
-            <div class="recipe-card-container">
+            <div id="recipe-card-container" class="recipe-card-container">
                 <a id="recipe0" class="recipe" href="#">
                     <div class="recipe-card" >
                         <div class="flip-box">
@@ -103,58 +141,6 @@
                         </div>
                     </div>
                 </a>
-                <a id="recipe2" class="recipe" href="#">
-                    <div class="recipe-card" >
-                        <div class="flip-box">
-                            <div class="flip-box-inner">
-                                <div class="card-image">
-                                    <img src="img/brooke-lark-min.jpg"/>
-                                </div>
-                                <div class="card-image card-image-alt">
-                                    <img src="img/cayla1-min.jpg"/>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-description">
-                            <h3 class="recipe-title">Sałatka z guacamole</h3>
-                            <i class="far fa-clock"></i> 45 min. <i class="far fa-user"></i> 4 os.<br>
-                            <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi iaculis, sem sit amet aliquam malesuada, eros ex pharetra sem, a fringilla arcu lacus eget lectus. Vestibulum rutrum augue nisi, eu eleifend lectus suscipit eu. Mauris justo eros, volutpat non diam et, viverra placerat ma..<span class="link">Więcej</span>
-                            </p>
-                        </div>
-                    </div>
-                </a>
-                <!-- <a id="recipe2" class="recipe" href="#">
-                    <div class="recipe-card">
-                        <div class="card-image">
-                            <!-- Photo by Cayla1 on Unsplash 
-                            <img src="img/cayla1-min.jpg"/>
-                        </div>
-                        <div class="card-description">
-                            <h3>Zupa dyniowa</h3>
-                            <i class="far fa-clock"></i> 30 min. <i class="far fa-user"></i> 4-6 os.<br>
-                            <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi iaculis, sem sit amet aliquam malesuada, eros ex pharetra sem, a fringilla arcu lacus eget lectus. Vestibulum rutrum augue nisi, eu eleifend lectus suscipit eu. Mauris justo eros, volutpat non diam et, viverra placerat ma..<span class="link">Więcej</span>
-                            </p>
-                        </div>
-        
-                    </div>
-                </a>
-                <a id="recipe3" class="recipe" href="#">
-                    <div class="recipe-card">
-                        <div class="card-image">
-                                <!-- Photo by Calum Lewis on Unsplash 
-                                <img src="img/calum-lewis-min.jpg"/>
-                            </div>
-                            <div class="card-description">
-                                <h3>Pancakes</h3>
-                                <i class="far fa-clock"></i> 20 min. <i class="far fa-user"></i> 2 os.<br>
-                                <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi iaculis, sem sit amet aliquam malesuada, eros ex pharetra sem, a fringilla arcu lacus eget lectus. Vestibulum rutrum augue nisi, eu eleifend lectus suscipit eu. Mauris justo eros, volutpat non diam et, viverra placerat ma..<span class="link">Więcej</span>
-                                </p>
-                            </div>
-                    </div>
-                </a> -->
             </div>
         </div>
 

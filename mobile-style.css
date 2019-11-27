@@ -64,6 +64,9 @@
 /* styles specific for mobile */
 @media only screen and (max-device-width: 480px) {
 
+    .btn {
+        font-size: 54px !important;
+    }
     html {
         font-size: 4vw;
     }
@@ -84,6 +87,22 @@
 
     footer li a {
         font-size: 44px;
+    }
+
+    .flip-box {
+        height: 800px !important;
+    }
+    .card-image img {
+        max-height: 800px !important;
+        /* height: 800px !important; */
+    }
+
+    .recipe-card {
+        max-height: 1300px;
+    }
+
+    .card-tall .recipe-card {
+        max-height: 2800px;
     }
 
     #footerSocials .fab {

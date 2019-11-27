@@ -175,7 +175,7 @@ var addRecipe = function () {
     addRecipeCard(recipes.length - 1);
 }
 
-var validateInput = function() {
+var validateInput = function(e) {
     var valid = true;
     var validationSummary = document.getElementById("validation-summary");
     validationSummary.innerHTML = "";
@@ -211,6 +211,8 @@ var validateInput = function() {
         addRecipe();
         closePopup();
         clearRecipeInput();
+    } else {
+        e.preventDefault();
     }
 };
 
@@ -241,3 +243,5 @@ var deleteRecipe = function(id) {
 
     recipes[id] = null;
 };
+
+document.getElementById('validateInput').addEventListener('click', validateInput);

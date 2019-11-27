@@ -142,7 +142,7 @@ header li a:hover, footer li a:hover {
     width: 50%;
 }
 
-.banner-text .btn {
+.banner-text .btn, #bestRecipes .btn {
     padding: 14px 44px;
     font-size: 32px;
     cursor: pointer;
@@ -151,7 +151,7 @@ header li a:hover, footer li a:hover {
     background-color: transparent;
 }
 
-.banner-text .btn:hover {
+.banner-text .btn:hover, #bestRecipes .btn:hover {
     border-color:#BF202D;
     color: #FAE5BA;
     background-color: #BF202D;
@@ -482,4 +482,13 @@ input[type=text], textarea {
 .popup .btn {
     border: none;
     padding: 12px 40px;
+}
+
+#validation-summary {
+    color: red;
+}
+
+#addRecipeWrapper {
+    display: flex;
+    justify-content: center;
 }

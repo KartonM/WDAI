@@ -176,7 +176,42 @@ var addRecipe = function () {
 }
 
 var validateInput = function() {
-    addRecipe();
+    var valid = true;
+    var validationSummary = document.getElementById("validation-summary");
+    validationSummary.innerHTML = "";
+
+    [].forEach.call(document.querySelectorAll('#popup1 input, #popup1 textarea'),function(e){
+        if(e.parentNode.tagName != "LI" && e.value == "") {
+            console.log(e);
+            if(validationSummary.innerHTML == "") {
+                validationSummary.innerHTML += 'Wypełnij wszystkie wymagane pola.<br/>';
+            }
+            if(valid) { e.focus();}
+            valid = false;
+        }
+    });
+
+    var imgSrc = document.getElementById("imgSrcInput");
+    //console.log(imgSrc.value);
+    if(imgSrc.value != "" && imgSrc.value.match(/\.(jpeg|jpg|gif|png)$/) == null) {
+        validationSummary.innerHTML += `"${imgSrc.value}" nie jest poprawnym adresem obrazka<br/>`;
+        if(valid) { imgSrc.focus();}
+        valid = false;
+    }
+
+    var altImgSrc = document.getElementById("altImgSrcInput");
+    //console.log(altImgSrc.value);
+    if(altImgSrc.value != "" && altImgSrc.value.match(/\.(jpeg|jpg|gif|png)$/) == null) {
+        validationSummary.innerHTML += `"${altImgSrc.value}" nie jest poprawnym adresem obrazka<br/>`;
+        if(valid) { altImgSrc.focus();}
+        valid = false;
+    }
+
+    if(valid) {
+        addRecipe();
+        closePopup();
+        clearRecipeInput();
+    }
 };
 
 var clearRecipeInput = function() {
@@ -206,6 +241,3 @@ var deleteRecipe = function(id) {
 
     recipes[id] = null;
 };
-//TODO guzior z dodawaniem przepisów (użyj clearRecipeInput!)
-//scroll po naciśnięciu "Sprawdź"
-//walidacja inputu przepisu

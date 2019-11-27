@@ -20,6 +20,7 @@
             <div id="dialog" class="window">
                 <h2>Dodaj przepis</h2>
                 <form>
+                    <div id="validation-summary"></div>
                     <div>
                         <label>Nazwa</label>
                         <input id="titleInput" type="text"/>
@@ -79,7 +80,7 @@
                 <h1>Przysmaki tej jesieni</h1>
                 <hr/>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi iaculis, sem sit amet aliquam malesuada, eros ex pharetra sem, a fringilla arcu lacus eget lectus. Vestibulum rutrum augue nisi, eu eleifend lectus suscipit eu.</p>
-                <a href="#popup1" class="btn" style="text-decoration: none;">Sprawdź!</a>
+                <a href="#bestRecipes" class="btn">Sprawdź!</a>
             </div>
 
         </div>
@@ -98,6 +99,9 @@
         <div id="bestRecipes">
             <h2>Popularne przepisy</h2>
             <hr/>
+            <div id="addRecipeWrapper">
+                <a href="#popup1" class="btn">Dodaj swój przepis!</a>
+            </div>
             <div id="recipe-card-container" class="recipe-card-container">
                 <a id="recipe0" class="recipe" href="#">
                     <div class="recipe-card" >
